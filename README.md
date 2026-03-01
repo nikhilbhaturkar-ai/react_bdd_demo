@@ -55,7 +55,6 @@ The following scripts are available in the package.json file:
 - Run Playwright tests: npm run playwright-test
 - Run tests in QA environment: npm run qa-env
 - Run tests in development environment: npm run dev-env
-
 - Run tests in production environment: npm run prod-env
 
 # npm install -i

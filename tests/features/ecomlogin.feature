@@ -1,10 +1,8 @@
 @login
 Feature: Verify login
-
-    Feature Description
-
-	Verify user is able to login with valid and invalid credentials
-
+    Feature Description: Verify user is able to login with valid and invalid credentials
+	
+	@logindatadriven 
 	Scenario: Verify user is able to login with valid credentials
 	 Given I navigate to "https://ecommerce-playground.lambdatest.io/"
 	 And I click on My account
@@ -20,12 +18,10 @@ Feature: Verify login
 	 And I enter E-Mail Address "<emailaddress>"
 	 And I enter password "<password>"
      When I click on submit button
-	 Then I should verify user is not able to login and url contains "route=account/login"
+	 Then I should verify user is not able to login and url contains "route=account/logidddn"
 	
 	Examples:
-		| emailaddress		| password 	 	| 
-		| xzy@gmail.com 	  |	 TesMeTest     |
-		| srk@testroverautomation.com | Jawan123 |
-		| testerrgreat@123.com | Tesrxzy123 |
-		| srk_jawan@test.com | great123 |
-		| SalmanDabang@gmail.com | test 123 |
+		| emailaddress		  			| password 	 	| 
+		| srk@testroverautomation.com 	| Jawan123 		|
+		| srk_jawan@test.com 			| great123 		|
+		| SalmanDabang@gmail.com 		| test 123 		|

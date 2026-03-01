@@ -7,7 +7,9 @@
     "test": "npm run bddgen && npm run playwright-test",
     "bddgen": "npx bddgen",
     "clean": "rmdir /S /Q .features-gen",
-    "playwright-test": "npx playwright test --reporter=html,list --workers 3 --headed",
+    "parellel-test": "npx playwright test --reporter=html,list --grep @logindatadriven --workers 3 --headed",
+    "data-driven-test": "npm run bddgen && npx playwright test --grep @logindatadriven --reporter=html,list  --workers 1 --headed",
+    "retry-test": "npm run bddgen && npx playwright test --grep @logindatadriven --reporter=html,list --workers 3 --headed --retries 1",
     "qa-env": "powershell -Command \"$env:ENV='qa'; npx bddgen; npx playwright test",
     "dev-env": "powershell -Command \"$env:ENV='dev'; npx bddgen; npx playwright test",
     "prod-env": "powershell -Command \"$env:ENV='prod'; npx bddgen; npx playwright test",
@@ -22,7 +24,7 @@
     "@playwright/test": "^1.58.2",
     "@types/node": "^20.11.30",
     "cross-env": "^7.0.3",
-    "dotenv": "^16.6.1"
+    "dotenv": "^16.4.5"
   },
   "dependencies": {
     "playwright": "^1.58.2",

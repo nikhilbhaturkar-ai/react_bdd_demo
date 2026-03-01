@@ -34,7 +34,6 @@ Then('I should verify url contains {string}', async ({page}, logged_url) => {
     await expect(page).toHaveURL(new RegExp(logged_url))
 });
 
-
 // 1. Missing step definition for "tests\ecomlogin.feature:21:3"
 Then('I should verify user is not able to login and url contains {string}', async ({page}, login_url) => {
   await expect(page).toHaveURL(new RegExp(login_url));
